@@ -42,7 +42,7 @@ function showQuestion() {
   const { question, options } = currentQuestion;
 
   // Display the question
-  questionElement.textContent = `Q ${currentQuestionIndex + 1}: ${question}`;
+  questionElement.textContent = `Q${currentQuestionIndex + 1}: ${question}`;
 
   // Clear and configure the options container
   optionsContainer.innerHTML = '';
