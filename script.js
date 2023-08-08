@@ -61,7 +61,7 @@ function showQuestion() {
   // Clear and configure the options container
   optionsContainer.innerHTML = '';
   optionsContainer.style.display = 'grid';
-  optionsContainer.style.gridTemplateColumns = '1fr 1fr'; // Display options in two columns
+  optionsContainer.style.gridTemplateColumns = '1fr'; // Display options in two columns
 
   // Initialize the question index and text
   let questionIndex = 0;
@@ -139,7 +139,7 @@ function showAnswer() {
   questionElement.textContent = `Q${currentQuestionIndex + 1}: ${question}`;
   optionsContainer.innerHTML = '';
   optionsContainer.style.display = 'grid';
-  optionsContainer.style.gridTemplateColumns = '1fr 1fr'; // Display options in two columns
+  optionsContainer.style.gridTemplateColumns = '1fr'; // Display options in two columns
 
   // Create option elements and add them to the options container
   options.forEach(option => {
@@ -184,7 +184,7 @@ function showExplanation(explanation) {
   // Display the explanation character by character
   explanationElement.textContent = ''; // Clear the existing text
   explanationElement.style.display = 'block';
-  explanationElement.style.fontSize = '3.5vw'; // Set the initial font size for explanation
+  explanationElement.style.fontSize = '5vw'; // Set the initial font size for explanation
   explanationElement.style.color = '#FFFFFF'; // Explicitly set the text color to white
 
   let explanationIndex = 0;
@@ -224,12 +224,12 @@ function nextQuestion() {
     questionElement.style.display = 'flex';
     questionElement.style.alignItems = 'center';
     questionElement.style.justifyContent = 'center';
-    questionElement.style.fontSize = '5vw'; // Adjust the font size as per your preference
+    questionElement.style.fontSize = '8vw'; // Adjust the font size as per your preference
 
     // Create a new element for the support and subscribe message
     const supportMessageElement = document.createElement('p');
     supportMessageElement.textContent = 'Please support and subscribe';
-    supportMessageElement.style.fontSize = '3vw'; // Adjust the font size as per your preference
+    supportMessageElement.style.fontSize = '6vw'; // Adjust the font size as per your preference
     supportMessageElement.style.textAlign = 'center';
     supportMessageElement.style.marginTop = '20px';
     supportMessageElement.style.fontFamily = 'Courier New';
