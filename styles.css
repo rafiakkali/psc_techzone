@@ -1,134 +1,140 @@
+/* CSS styles for the main container */
+#main-container {
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 /* CSS styles for the quiz container */
 #quiz-container {
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  max-width: 100vw;
+    flex: 1;
+    padding: 20px;
+    background: linear-gradient(to bottom, #020C3A, #B0C4DE);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-family: Calibri, Courier New, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
 }
 
-/* CSS styles for the question */
+
+
+/* CSS styles for the question and answer elements */
 #question {
-  font-size: 3.5vw;
+  font-size: 4vw;
   font-weight: bold;
-  color: #333;
-  text-align: justify;
-  margin-bottom: 20px;
-  overflow-wrap: break-word; /* Add this line */
+  margin-bottom: 40px;
+  color: #FAFAFA;
+  text-align: left;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility; /* Optimize text rendering for better legibility */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
 }
 
-/* CSS styles for the option containers */
+
 /* CSS styles for the option containers */
 .option-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #f0f0f0;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow-wrap: break-word;
-  margin-right: 10px;
-  font-size: 2.5vw;
-  width: 85%; /* Add this line to make all option containers full width */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #a1f000;
+    padding: 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
 }
 
 
-/* CSS styles for the last option container */
-.option-container:last-child {
-  margin-right: 0; /* Add this line */
+
+.option-container:hover {
+    background-color: #F0F0F0;
 }
 
+.option-container p {
+    margin: 5px;
+    color: #333;
+    font-size: 3vw;
+    font-weight: bold;
+}
 
-/* CSS styles for the answer */
+/* CSS styles for the answer element */
 #answer {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 3.5vw;
-  color: #008000;
-  text-align: center;
-  overflow-wrap: break-word; /* Add this line */
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 5vw;
+    color: #000;
+    text-align: center;
+    overflow-wrap: break-word;
 }
 
 
 /* CSS styles for the timer */
 #timer {
-  font-size: 4vw;
-  font-weight: bold;
-  color: #FF4500;
-  text-align: center;
-  margin-top: 20px;
-  display: none;
-  overflow: hidden;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #F0F0F0;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
 }
+
+
+/* CSS styles for the explanation element */
+#explanation {
+    font-size: 4vw;
+    /* Set the initial font size for explanation */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    /* Set the text color to white */
+    text-shadow: none;
+    /* Ensure no text-shadow is applied */
+    text-align: left;
+    overflow-wrap: break-word;
+    display: none;
+    /* Hide the explanation element initially */
+}
+
 
 /* Mobile-friendly styles */
 @media screen and (max-width: 768px) {
-  #quiz-container {
-    padding: 10px;
-  }
+    #quiz-container {
+        padding: 10px;
+    }
 
-  #question {
-    font-size: 6vw;
-    margin-bottom: 16px;
-    overflow: hidden;
-  }
+    #question {
+        font-size: 6vw;
+    }
 
-  #options-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    margin-bottom: 16px;
-    justify-items: center;
-  }
+    #options-container p {
+        font-size: 4vw;
+    }
 
-.option-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-wrap: break-word;
-    margin-right: 10px;
-    font-size: 4vw; /* Adjust the font size as desired */
-  }
-
-  /* CSS styles for the last option container */
-  .option-container:last-child {
-    margin-right: 0;
-  }
-
-  #answer {
-    font-size: 5vw;
-    margin-bottom: 10px;
-    overflow: hidden;
-  }
+    #answer {
+        font-size: 4.5vw;
+    }
 
     #timer {
-    font-size: 6vw;
-    margin-top: 16px;
-    overflow: hidden;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
+        font-size: 6vw;
+    }
+
+    #explanation {
+        font-size: 6vw;
+    }
