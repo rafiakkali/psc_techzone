@@ -1,7 +1,7 @@
 /* CSS styles for the main container */
 #main-container {
-    width: 98vw;
-    height: 98vh;
+    width: 45vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: stretch;
