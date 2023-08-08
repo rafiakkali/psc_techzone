@@ -115,26 +115,41 @@
 
 /* Mobile-friendly styles */
 @media screen and (max-width: 768px) {
-    #quiz-container {
-        padding: 10px;
-    }
+  /* Adjust font sizes for mobile devices */
+  #question {
+    font-size: 8vw;
+    margin-bottom: 20px;
+  }
 
-    #question {
-        font-size: 6vw;
-    }
+  .option-container p {
+    font-size: 6vw;
+  }
 
-    #options-container p {
-        font-size: 4vw;
-    }
+  #answer {
+    font-size: 7vw;
+    margin-top: 10px;
+  }
 
-    #answer {
-        font-size: 4.5vw;
-    }
+  #explanation {
+    font-size: 6vw;
+    margin-bottom: 10px;
+  }
 
-    #timer {
-        font-size: 6vw;
-    }
+  #timer {
+    font-size: 6vw;
+    margin-top: 20px;
+  }
 
-    #explanation {
-        font-size: 6vw;
-    }
+  /* Display options as one column centered */
+  #options-container {
+    grid-template-columns: 1fr; /* Display options in one column */
+    align-items: center; /* Center-align options */
+    text-align: center; /* Center-align option text */
+  }
+
+  /* Adjust the container ratio to 9:16 */
+  #quiz-container {
+    padding: 10px;
+    aspect-ratio: 9 / 16;
+  }
+}
