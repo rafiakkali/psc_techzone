@@ -117,7 +117,7 @@
 @media screen and (max-width: 768px) {
   /* Adjust font size for options on mobile devices */
   .option-container p {
-    font-size: 9vw;
+    font-size: 20vw;
   }
 
   /* Display options in a single column on mobile devices */
@@ -135,18 +135,18 @@
 
   /* Adjust font size for mobile devices */
   #question {
-    font-size: 11vw;
+    font-size: 20vw;
   }
 
   #answer {
-    font-size: 10vw;
+    font-size: 20vw;
   }
 
   #timer {
-    font-size: 9vw;
+    font-size: 18vw;
   }
 
   #explanation {
-    font-size: 8vw;
+    font-size: 18vw;
   }
 }
