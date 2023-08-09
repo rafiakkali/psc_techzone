@@ -73,7 +73,7 @@ function showQuestion() {
     questionText += question[questionIndex];
 
     // Display the current question text
-    questionElement.textContent = `Q${currentQuestionIndex + 1}: ${questionText}`;
+    questionElement.textContent = `${currentQuestionIndex}: ${questionText}`;
 
     // Increment the question index
     questionIndex++;
@@ -136,7 +136,7 @@ function showAnswer() {
   const { question, options, answer, explanation } = currentQuestion;
 
   // Display the question and options
-  questionElement.textContent = `Q${currentQuestionIndex + 1}: ${question}`;
+  questionElement.textContent = `${currentQuestionIndex}: ${question}`;
   optionsContainer.innerHTML = '';
   optionsContainer.style.display = 'grid';
   optionsContainer.style.gridTemplateColumns = '1fr'; // Display options in two columns
