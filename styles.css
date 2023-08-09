@@ -18,7 +18,7 @@
     background: linear-gradient(to bottom, #020C3A, #B0C4DE);
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    font-family: Calibri, Courier New, sans-serif;
+    font-family: Calibri, Futura, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +68,7 @@
 }
 
 .option-container p {
-    margin: 5px;
+    margin: 15px;
     color: #333;
     font-size: 6vw;
     font-weight: bold;
@@ -123,7 +123,7 @@
   /* Display options in a single column on mobile devices */
   #options-container {
     grid-template-columns: 1fr; /* Display options in a single column */
-    grid-row-gap: 10px; /* Gap between options */
+    grid-row-gap: 20px; /* Gap between options */
   }
 
   /* Adjust aspect ratio for mobile devices */
