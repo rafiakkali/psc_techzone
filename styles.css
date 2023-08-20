@@ -35,7 +35,7 @@
 
 /* CSS styles for the question and answer elements */
 #question {
-  font-size: 4vw;
+  font-size: 8vw;
   font-weight: bold;
   margin-bottom: 40px;
   color: #FAFAFA;
@@ -70,7 +70,7 @@
 .option-container p {
     margin: 5px;
     color: #000000;
-    font-size: 3vw;
+    font-size: 6vw;
     font-weight: bold;
 }
 
@@ -78,7 +78,7 @@
 #answer {
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 5vw;
+    font-size: 10vw;
     color: #1bff00;
     text-align: center;
     overflow-wrap: break-word;
@@ -87,7 +87,7 @@
 
 /* CSS styles for the timer */
 #timer {
-    font-size: 4vw;
+    font-size: 8vw;
     font-weight: bold;
     color: #F0F0F0;
     text-align: center;
@@ -98,7 +98,7 @@
 
 /* CSS styles for the explanation element */
 #explanation {
-    font-size: 5vw;
+    font-size: 10vw;
     /* Set the initial font size for explanation */
     font-weight: bold;
     margin-bottom: 10px;
@@ -120,19 +120,19 @@
     }
 
     #question {
-        font-size: 6vw;
+        font-size: 12vw;
     }
 
     #options-container p {
-        font-size: 4vw;
+        font-size: 8vw;
     }
 
     #answer {
-        font-size: 4.5vw;
+        font-size: 9vw;
     }
 
     #timer {
-        font-size: 6vw;
+        font-size: 12vw;
     }
 
     #explanation {
