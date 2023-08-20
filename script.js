@@ -48,6 +48,22 @@ function parseMCQData(mcqData) {
     });
 }
 
+function startQuiz() {
+  const mcqInput = document.getElementById('mcq-input');
+  const mcqData = mcqInput.value.trim();
+  parsedQuestions = parseMCQData(mcqData);
+
+  if (parsedQuestions.length > 0) {
+    startButton.style.display = 'none';
+    mcqInput.style.display = 'none'; // Hide the text box
+    quizContainer.style.display = 'block';
+
+    // Delay before showing the first question
+    setTimeout(() => {
+      showQuestion();
+    }, 5000); // Wait 2 seconds before showing the first question
+  }
+}
 
 // ... Your existing code ...
 
@@ -61,7 +77,7 @@ function showQuestion() {
   // Clear and configure the options container
   optionsContainer.innerHTML = '';
   optionsContainer.style.display = 'grid';
-  optionsContainer.style.gridTemplateColumns = '1fr'; // Display options in two columns
+  optionsContainer.style.gridTemplateColumns = '1fr 1fr'; // Display options in two columns
 
   // Initialize the question index and text
   let questionIndex = 0;
@@ -73,7 +89,7 @@ function showQuestion() {
     questionText += question[questionIndex];
 
     // Display the current question text
-    questionElement.textContent = `${questionText}`;
+    questionElement.textContent = `Q${currentQuestionIndex + 1}: ${questionText}`;
 
     // Increment the question index
     questionIndex++;
@@ -110,7 +126,7 @@ function showQuestion() {
 
   // Show the question element and start a timer to display the question character by character
   questionElement.style.display = 'block';
-  const questionTimer = setInterval(displayQuestionText, 80); // Delay between each character (adjust as needed)
+  const questionTimer = setInterval(displayQuestionText, 50); // Delay between each character (adjust as needed)
 
   answerElement.textContent = ''; // Clear the answer
   explanationElement.textContent = ''; // Clear the explanation
@@ -136,7 +152,7 @@ function showAnswer() {
   const { question, options, answer, explanation } = currentQuestion;
 
   // Display the question and options
-  questionElement.textContent = `${question}`;
+  questionElement.textContent = `Q${currentQuestionIndex + 1}: ${question}`;
   optionsContainer.innerHTML = '';
   optionsContainer.style.display = 'grid';
   optionsContainer.style.gridTemplateColumns = '1fr'; // Display options in two columns
@@ -182,15 +198,18 @@ function showAnswer() {
 
 function showExplanation(explanation) {
   // Display the explanation character by character
-  explanationElement.textContent = ''; // Clear the existing text
+  explanationElement.innerHTML = ''; // Clear the existing content
   explanationElement.style.display = 'block';
-  explanationElement.style.fontSize = '5vw'; // Set the initial font size for explanation
-  explanationElement.style.color = '#FFFFFF'; // Explicitly set the text color to white
+  explanationElement.style.fontSize = '2.5vw';
+  explanationElement.style.color = '#FFFFFF';
 
   let explanationIndex = 0;
-  const explanationText = `Explanation: ${explanation}`;
+  const explanationText = `${explanation}`;
   const explanationTimer = setInterval(() => {
-    explanationElement.textContent += explanationText[explanationIndex];
+    // Use <br> to add line breaks
+    explanationElement.innerHTML += explanationText[explanationIndex] === '\n'
+      ? '<br>'
+      : explanationText[explanationIndex];
     explanationIndex++;
 
     // Check if all characters have been displayed
@@ -199,11 +218,11 @@ function showExplanation(explanation) {
 
       // Delay for 6 seconds after showing the explanation before proceeding to the next question
       setTimeout(() => {
-        explanationElement.style.display = 'none'; // Hide the explanation
+        explanationElement.style.display = 'none';
         nextQuestion();
-      }, 6000); // 6000 milliseconds = 6 seconds (delay before proceeding to the next question)
+      }, 6000);
     }
-  }, 80); // Delay between each character (adjust as needed)
+  }, 75);
 }
 
 
@@ -224,12 +243,12 @@ function nextQuestion() {
     questionElement.style.display = 'flex';
     questionElement.style.alignItems = 'center';
     questionElement.style.justifyContent = 'center';
-    questionElement.style.fontSize = '8vw'; // Adjust the font size as per your preference
+    questionElement.style.fontSize = '5vw'; // Adjust the font size as per your preference
 
     // Create a new element for the support and subscribe message
     const supportMessageElement = document.createElement('p');
     supportMessageElement.textContent = 'Please support and subscribe';
-    supportMessageElement.style.fontSize = '6vw'; // Adjust the font size as per your preference
+    supportMessageElement.style.fontSize = '3vw'; // Adjust the font size as per your preference
     supportMessageElement.style.textAlign = 'center';
     supportMessageElement.style.marginTop = '20px';
     supportMessageElement.style.fontFamily = 'Courier New';
