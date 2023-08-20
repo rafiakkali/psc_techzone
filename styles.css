@@ -15,10 +15,10 @@
 #quiz-container {
     flex: 1;
     padding: 20px;
-    background: linear-gradient(to bottom, #020C3A, #B0C4DE);
+    background: linear-gradient(to bottom, #000000, #4A4A4B);
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    font-family: Calibri, Futura, sans-serif;
+    font-family: Calibri, Courier New, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,11 +35,11 @@
 
 /* CSS styles for the question and answer elements */
 #question {
-  font-size: 9vw;
+  font-size: 4vw;
   font-weight: bold;
   margin-bottom: 40px;
   color: #FAFAFA;
-  text-align: left;
+  text-align: justify;
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility; /* Optimize text rendering for better legibility */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
@@ -51,7 +51,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: #a1f000;
+    background-color: #f1f000;
     padding: 12px;
     border-radius: 20px;
     margin-bottom: 12px;
@@ -68,9 +68,9 @@
 }
 
 .option-container p {
-    margin: 15px;
-    color: #333;
-    font-size: 6vw;
+    margin: 5px;
+    color: #000000;
+    font-size: 3vw;
     font-weight: bold;
 }
 
@@ -78,8 +78,8 @@
 #answer {
     font-weight: bold;
     margin-bottom: 10px;
-    font-size: 10vw;
-    color: #000;
+    font-size: 5vw;
+    color: #1bff00;
     text-align: center;
     overflow-wrap: break-word;
 }
@@ -87,7 +87,7 @@
 
 /* CSS styles for the timer */
 #timer {
-    font-size: 9vw;
+    font-size: 4vw;
     font-weight: bold;
     color: #F0F0F0;
     text-align: center;
@@ -98,7 +98,7 @@
 
 /* CSS styles for the explanation element */
 #explanation {
-    font-size: 7vw;
+    font-size: 5vw;
     /* Set the initial font size for explanation */
     font-weight: bold;
     margin-bottom: 10px;
@@ -106,7 +106,7 @@
     /* Set the text color to white */
     text-shadow: none;
     /* Ensure no text-shadow is applied */
-    text-align: left;
+    text-align: justify;
     overflow-wrap: break-word;
     display: none;
     /* Hide the explanation element initially */
@@ -115,38 +115,26 @@
 
 /* Mobile-friendly styles */
 @media screen and (max-width: 768px) {
-  /* Adjust font size for options on mobile devices */
-  .option-container p {
-    font-size: 20vw;
-  }
+    #quiz-container {
+        padding: 10px;
+    }
 
-  /* Display options in a single column on mobile devices */
-  #options-container {
-    grid-template-columns: 1fr; /* Display options in a single column */
-    grid-row-gap: 20px; /* Gap between options */
-  }
+    #question {
+        font-size: 6vw;
+    }
 
-  /* Adjust aspect ratio for mobile devices */
-  #quiz-container {
-    padding: 10px;
-    aspect-ratio: 9/16; /* 9:16 aspect ratio */
-    max-width: 90vw; /* Limit maximum width for better mobile view */
-  }
+    #options-container p {
+        font-size: 4vw;
+    }
 
-  /* Adjust font size for mobile devices */
-  #question {
-    font-size: 20vw;
-  }
+    #answer {
+        font-size: 4.5vw;
+    }
 
-  #answer {
-    font-size: 20vw;
-  }
+    #timer {
+        font-size: 6vw;
+    }
 
-  #timer {
-    font-size: 18vw;
-  }
-
-  #explanation {
-    font-size: 18vw;
-  }
-}
+    #explanation {
+        font-size: 6vw;
+    }
