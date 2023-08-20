@@ -77,7 +77,7 @@ function showQuestion() {
   // Clear and configure the options container
   optionsContainer.innerHTML = '';
   optionsContainer.style.display = 'grid';
-  optionsContainer.style.gridTemplateColumns = '1fr 1fr'; // Display options in two columns
+  optionsContainer.style.gridTemplateColumns = '1fr'; // Display options in two columns
 
   // Initialize the question index and text
   let questionIndex = 0;
