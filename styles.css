@@ -37,7 +37,7 @@
 #question {
   font-size: 8vw;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #FAFAFA;
   text-align: justify;
   overflow-wrap: break-word;
@@ -54,7 +54,7 @@
     background-color: #f1f000;
     padding: 12px;
     border-radius: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -77,7 +77,7 @@
 /* CSS styles for the answer element */
 #answer {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     font-size: 10vw;
     color: #1bff00;
     text-align: center;
@@ -91,7 +91,7 @@
     font-weight: bold;
     color: #F0F0F0;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     display: none;
 }
 
